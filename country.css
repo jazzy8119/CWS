@@ -1,0 +1,25 @@
+body {
+    background-color: aqua;
+}
+
+#myForm {
+    margin: 50px;
+    padding-top: 10px;
+    text-align: center;
+   font-size: x-large;
+    display: block;
+}
+
+#previous, #next {
+    margin-top: 50px;
+    margin: auto;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+#container {
+    color: black;
+    font-size: 30px;
+    list-style: none;
+}
