@@ -95,9 +95,9 @@ showMore.addEventListener('click', function(){
     btnDel.setAttribute('class', 'del-btn');
     btnElem.innerHTML = 'Show';
     btnDel.innerHTML = 'Delete';
+    ul2.append(li);
     ul2.append(btnElem);
     ul2.append(btnDel);
-    ul2.append(li);
     cont2.append(ul2);
     li.innerHTML = thename.name;
     showMore.innerHTML = 'Show Less';
@@ -108,28 +108,41 @@ showMore.addEventListener('click', function(){
     showMore.innerHTML ='Show More'
     x--;
 }
-});
-
-
 
 let showButton = document.getElementsByClassName('show-btn');
 let delButton = document.getElementsByClassName('del-btn');
 let cont3 = document.getElementById('container3');
 let ul3 = document.createElement('ul');
 
-
-for (j = 0; j < showButton.length; j++) {
+// button that shows a specific countries information.
+for (let j = 0; j < showButton.length; j++) {
+    
     showButton[j].addEventListener('click', function(open){
-        ul3.innerHTML = "";
+        
+        ul.innerHTML = "";
         for (const [key, value] of Object.entries(countries[j])) {
             let li = document.createElement('li');
-            ul3.append(li);
-            cont3.append(ul3);
+            cont.append(ul);
+            ul.append(li);
             li.innerHTML = `${key}: ${value}`;
-            
+        }
+
+    })
+    // Delete button to remove one country from our array
+    delButton[j].addEventListener('click', function(del){
+        
+        if (countries.length > 1) {
+            ul2.innerHTML = "";
+            countries.splice([j], 1);
+            let textDel = document.createElement('p');
+            ul2.appendChild(textDel);
+            textDel.innerHTML = 'Country Removed !';
+            return showMore;
         }
     })
 };
+
+});
 
 
 
