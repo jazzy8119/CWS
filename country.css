@@ -1,5 +1,5 @@
 body {
-    background-color: aqua;
+    background-color: rgb(123, 210, 174);
 }
 
 #myForm {
@@ -22,4 +22,35 @@ body {
     color: black;
     font-size: 30px;
     list-style: none;
+}
+
+#next, #previous {
+    background-color: #050605c9; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px
+}
+
+#showmore {
+    
+        background-color: #121512; /* Green */
+        border: none;
+        color: white;
+        padding: 8px 23px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        border-radius: 3px;
+}
+
+#showmore:hover{
+        
+        box-shadow: 0 12px 16px 0 rgba(11, 10, 10, 0.445), 0 17px 50px 0 rgba(0,0,0,0.19);
+    
 }
